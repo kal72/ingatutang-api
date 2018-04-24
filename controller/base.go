@@ -2,10 +2,10 @@ package controllers
 
 import (
 	"github.com/juusechec/jwt-beego"
-	"net/http"
 	"github.com/astaxie/beego"
-	http2 "goprint/http"
 	"ingat_utang/util"
+	http2 "ingat_utang/http"
+	"net/http"
 )
 
 type Controller struct {
