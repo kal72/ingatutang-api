@@ -1,11 +1,9 @@
 package controllers
 
 import (
-	"github.com/juusechec/jwt-beego"
 	"github.com/astaxie/beego"
 	"ingat_utang/util"
 	http2 "ingat_utang/http"
-	"net/http"
 )
 
 type Controller struct {
@@ -24,9 +22,8 @@ func (c *Controller) Prepare() {
 	return
 }
 
-func CheckToken(r *http.Request) bool {
-	token := r.Header.Get("Authorization")
-	et := jwtbeego.EasyToken{}
-	valid, _, _ := et.ValidateToken(token)
-	return valid
+func (c *Controller) Get()  {
+	c.Ctx.Output.SetStatus(http2.StatusForbidden)
+	c.Data["json"] = http2.Result(nil, http2.StatusForbidden)
+	c.ServeJSON()
 }
