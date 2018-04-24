@@ -1,7 +1,7 @@
 package http
 
 import (
-	"ingat_utang/entity"
+	"ingat_utang/model"
 )
 
 const StatusOk  = 200

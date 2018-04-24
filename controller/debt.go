@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
-	"ingat_utang/entity"
+	"ingat_utang/model"
 	"ingat_utang/service"
 	"ingat_utang/http"
 	"github.com/astaxie/beego"

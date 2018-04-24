@@ -4,7 +4,7 @@ import (
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"
-	"ingat_utang/entity"
+	"ingat_utang/model"
 	"ingat_utang/controller"
 )
 

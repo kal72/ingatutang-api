@@ -1,7 +1,7 @@
 package service
 
 import (
-	"ingat_utang/entity"
+	"ingat_utang/model"
 	"github.com/astaxie/beego/orm"
 )
 
