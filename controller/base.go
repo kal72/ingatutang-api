@@ -21,9 +21,3 @@ func (c *Controller) Prepare() {
 
 	return
 }
-
-func (c *Controller) Get()  {
-	c.Ctx.Output.SetStatus(http2.StatusForbidden)
-	c.Data["json"] = http2.Result(nil, http2.StatusForbidden)
-	c.ServeJSON()
-}

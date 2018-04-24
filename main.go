@@ -24,7 +24,6 @@ func init() {
 func main() {
 	orm.Debug = true
 
-	beego.Router("/", &controllers.Controller{})
 	beego.Router("/users", &controllers.UserController{})
 	beego.Router("/login", &controllers.LoginController{})
 	beego.Router("/logout", &controllers.LoginController{})
