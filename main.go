@@ -6,6 +6,8 @@ import (
 	_ "github.com/lib/pq"
 	"ingat_utang/model"
 	"ingat_utang/controller"
+	"strconv"
+	"os"
 )
 
 func init() {
@@ -22,6 +24,11 @@ func init() {
 }
 
 func main() {
+	port, err := strconv.Atoi(os.Getenv("PORT"))
+	if err == nil {
+		beego.BConfig.Listen.HTTPPort = port
+	}
+
 	orm.Debug = true
 
 	beego.Router("/users", &controllers.UserController{})
